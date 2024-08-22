@@ -38,7 +38,7 @@ app.initializers.add('davwheat/custom-sidenav-links', (app) => {
 
         items.add(
           'customLink-' + i,
-          <LinkButton external={!link.internal} href={href} rel="noopener noreferrer" icon={link.icon}>
+          <LinkButton external={!link.internal} href={href} rel="noopener noreferrer" target={link.internal ? null : "_blank"} icon={link.icon}>
             {link.text}
           </LinkButton>,
           priority
